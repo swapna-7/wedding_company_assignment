@@ -318,13 +318,13 @@ export default function Home() {
     >
       {/* Outer Glass Container - Creates frosted glass effect */}
       <div
-        className="relative w-[95%] sm:w-[90%] md:w-[85%] lg:w-[90%] xl:w-[90%] 2xl:w-[92%] max-w-[1520px] min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:h-[640px] xl:h-[640px] 2xl:h-[700px] rounded-2xl md:rounded-3xl"
+        className="relative w-[95%] sm:w-[90%] md:w-[85%] lg:w-[90%] xl:w-[90%] 2xl:w-[92%] max-w-[1520px] min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:h-[640px] xl:h-[640px] 2xl:h-[700px] rounded-2xl md:rounded-4xl"
         style={{
           background: "rgba(255, 255, 255, 0.2)", // Semi-transparent white
           backdropFilter: "blur(10px)", // Blur effect for glassmorphism
           WebkitBackdropFilter: "blur(10px)", // Safari support
           border: "1px solid rgba(255, 255, 255, 0.3)",
-          boxShadow: "0 8px 50px 0 rgba(31, 38, 135, 0.5)",
+          boxShadow: "0 8px 50px 0 rgba(0, 0, 0, 0.45)",
         }}
       >
         {/* Decorative Paw Animation - Bottom Left Corner */}
@@ -352,7 +352,7 @@ export default function Home() {
 
         {/* Inner Content Container */}
         <div
-          className="absolute inset-4 sm:inset-6 md:inset-8 lg:inset-10 rounded-xl md:rounded-2xl flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 overflow-hidden"
+          className="absolute inset-4 sm:inset-6 md:inset-8 lg:inset-10 rounded-xl md:rounded-3xl flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 overflow-hidden"
           style={{
             backgroundColor: "#F4FDFF", // Light blue-white background
             boxShadow: "0 4px 16px 0 rgba(0, 0, 0, 0.1)",
@@ -485,7 +485,7 @@ export default function Home() {
                     whileTap={{ scale: currentQuestion > 0 ? 0.95 : 1 }}
                     onClick={handlePrev}
                     disabled={currentQuestion === 0} // Disable on first question
-                    className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center rounded transition-all"
+                    className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center rounded-lg border-[#C6E9F7] border transition-all"
                     style={{
                       background: currentQuestion > 0 ? "linear-gradient(90deg, #C6E9F7 0%, #E5F8FF 100%)" : "#F0F0F0",
                       cursor: currentQuestion > 0 ? "pointer" : "not-allowed",
@@ -507,7 +507,7 @@ export default function Home() {
                     whileTap={{ scale: selectedAnswers[currentQuestion] ? 0.95 : 1 }}
                     onClick={handleNext}
                     disabled={!selectedAnswers[currentQuestion]} // Require answer selection
-                    className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center rounded transition-all"
+                    className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center rounded-lg border-[#C6E9F7] border transition-all"
                     style={{
                       background: selectedAnswers[currentQuestion] ? "linear-gradient(90deg, #C6E9F7 0%, #E5F8FF 100%)" : "#F0F0F0",
                       cursor: selectedAnswers[currentQuestion] ? "pointer" : "not-allowed",
@@ -528,7 +528,7 @@ export default function Home() {
                     whileTap={{ scale: selectedAnswers[currentQuestion] ? 0.95 : 1 }}
                     onClick={handleSubmit}
                     disabled={!selectedAnswers[currentQuestion]} // Require answer selection
-                    className="rounded-lg font-semibold transition-all text-sm sm:text-base md:text-lg lg:text-lg px-5 sm:px-6 md:px-8 py-2 sm:py-2.5"
+                    className="rounded-lg font-semibold transition-all text-sm sm:text-base md:text-lg lg:text-lg px-5 sm:px-6 md:px-8 py-2 sm:py-2.5 border-[#C6E9F7] border"
                     style={{
                       background: selectedAnswers[currentQuestion] ? "linear-gradient(90deg, #C6E9F7 0%, #E5F8FF 100%)" : "#F0F0F0",
                       fontFamily: "var(--font-manrope)",

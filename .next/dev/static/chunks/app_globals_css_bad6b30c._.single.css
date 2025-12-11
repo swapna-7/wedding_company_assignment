@@ -68,6 +68,7 @@
     --radius-xl: .75rem;
     --radius-2xl: 1rem;
     --radius-3xl: 1.5rem;
+    --radius-4xl: 2rem;
     --default-transition-duration: .15s;
     --default-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     --default-font-family: var(--font-sans);
@@ -618,7 +619,7 @@
     border-radius: var(--radius-xl);
   }
 
-  .border {
+  .border, .border-1 {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
@@ -626,6 +627,15 @@
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
+  }
+
+  .border-\[1px\] {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+
+  .border-\[\#C6E9F7\] {
+    border-color: #c6e9f7;
   }
 
   .bg-white {
@@ -1169,6 +1179,12 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:rounded {
+      border-radius: .25rem;
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:rounded-2xl {
       border-radius: var(--radius-2xl);
     }
@@ -1177,6 +1193,12 @@
   @media (min-width: 48rem) {
     .md\:rounded-3xl {
       border-radius: var(--radius-3xl);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:rounded-4xl {
+      border-radius: var(--radius-4xl);
     }
   }
 
