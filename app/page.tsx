@@ -163,20 +163,20 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col items-center gap-14"
+          className="flex flex-col items-center gap-6 sm:gap-8 md:gap-10 lg:gap-14 px-4"
         >
-          <div className="bg-white px-6 py-2 rounded-lg">
+          <div className="bg-white px-4 sm:px-6 md:px-8 py-2 rounded-lg">
             <p
-              className="text-sm sm:text-base font-semibold text-gray-600"
-              style={{ fontFamily: "var(--font-manrope)" , padding: "5px 15px",}}
+              className="text-xs sm:text-sm md:text-base lg:text-base font-semibold text-gray-600"
+              style={{ fontFamily: "var(--font-manrope)" }}
             >
               Keep Learning!
             </p>
           </div>
           
-          <div className="flex flex-col items-center ">
+          <div className="flex flex-col items-center">
             <h2
-              className="text-4xl sm:text-5xl md:text-7xl italic"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-7xl italic px-4"
               style={{
                 fontFamily: "var(--font-dm-serif)",
                 background: "linear-gradient(90deg, #15313D 0%, #3CABDA 100%)",
@@ -192,12 +192,11 @@ export default function Home() {
           
           <button
             onClick={handleRestart}
-            className="rounded-lg font-semibold transition-all hover:scale-105"
+            className="rounded-lg font-semibold transition-all hover:scale-105 text-sm sm:text-base md:text-lg lg:text-lg px-6 sm:px-8 md:px-10 lg:px-10 py-2.5 sm:py-3"
             style={{
               background: "linear-gradient(90deg, #C6E9F7 0%, #E5F8FF 100%)",
               fontFamily: "var(--font-manrope)",
               color: "#15313D",
-              padding: "10px 30px",
             }}
           >
             Start Again
@@ -209,14 +208,14 @@ export default function Home() {
 
   return (
     <div
-      className="min-h-screen w-full flex items-center justify-center p-3 xs:p-4 sm:p-5 md:p-6 lg:p-8 xl:p-10 2xl:p-12"
+      className="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 md:p-8 lg:p-8 xl:p-10 2xl:p-12"
       style={{
         background:
           "linear-gradient(135deg, #BECFEE 0%, #71C6E2 33%, #D9F4FA 66%, #BECFEE 100%)",
       }}
     >
       <div
-        className="relative w-[92%] xs:w-[90%] sm:w-[88%] md:w-[86%] lg:w-[88%] xl:w-[90%] 2xl:w-[92%] max-w-[1520px] h-[300px] xs:h-[350px] sm:h-[400px] md:h-[480px] lg:h-[560px] xl:h-[640px] 2xl:h-[700px] rounded-xl xs:rounded-2xl sm:rounded-2xl md:rounded-3xl"
+        className="relative w-[95%] sm:w-[90%] md:w-[85%] lg:w-[90%] xl:w-[90%] 2xl:w-[92%] max-w-[1520px] min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:h-[640px] xl:h-[640px] 2xl:h-[700px] rounded-2xl md:rounded-3xl"
         style={{
           background: "rgba(255, 255, 255, 0.2)",
           backdropFilter: "blur(10px)",
@@ -226,16 +225,16 @@ export default function Home() {
         }}
       >
         <div
-          className="absolute inset-4 xs:inset-5 sm:inset-6 md:inset-8 lg:inset-10 rounded-lg xs:rounded-xl sm:rounded-2xl flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 lg:px-16 overflow-hidden"
+          className="absolute inset-4 sm:inset-6 md:inset-8 lg:inset-10 rounded-xl md:rounded-2xl flex flex-col items-center justify-center px-4 sm:px-6 md:px-10 lg:px-16 py-6 sm:py-8 overflow-hidden"
           style={{
             backgroundColor: "#F4FDFF",
             boxShadow: "0 4px 16px 0 rgba(0, 0, 0, 0.1)",
           }}
         >
-          <div className="w-full max-w-4xl flex flex-col items-center gap-5">
+          <div className="w-full max-w-4xl flex flex-col items-center gap-3 sm:gap-4 md:gap-5">
             {/* Title */}
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl italic text-center pb-4"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl italic text-center pb-1 sm:pb-2 md:pb-3 lg:pb-4 px-2"
               style={{
                 fontFamily: "var(--font-dm-serif)",
                 background: "linear-gradient(90deg, #15313D 0%, #3CABDA 100%)",
@@ -249,9 +248,9 @@ export default function Home() {
             </h1>
             
             {/* Subtitle */}
-            <div className="bg-white rounded-sm w-sm">
+            <div className="bg-white rounded px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2">
               <p
-                className="text-sm sm:text-base md:text-lg text-gray-700 text-center"
+                className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg text-gray-700 text-center whitespace-nowrap"
                 style={{
                   fontFamily: "var(--font-manrope)",
                 }}
@@ -261,7 +260,7 @@ export default function Home() {
             </div>
             
             {/* Progress Bar */}
-            <div className="w-full max-w-2xl flex gap-2">
+            <div className="w-full max-w-xl lg:max-w-2xl flex gap-1.5 sm:gap-2 px-2 sm:px-0">
               {questions.map((_, index) => (
                 <div
                   key={index}
@@ -286,7 +285,7 @@ export default function Home() {
             </div>
 
             {/* Questions and Answers */}
-            <div className="w-full relative flex justify-center">
+            <div className="w-full relative flex justify-center mt-1 sm:mt-2">
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={currentQuestion}
@@ -299,31 +298,31 @@ export default function Home() {
                   x: { type: "spring", stiffness: 300, damping: 30 },
                   opacity: { duration: 0.2 },
                 }}
-                className="w-full flex flex-col items-center gap-3 sm:gap-3"
+                className="w-full flex flex-col items-center gap-2 sm:gap-2.5 md:gap-3"
               >
                 {/* Question Box */}
                 <div
-                  className="w-3/4 px-4 sm:px-8 py-3 sm:py-4 md:py-5 rounded-lg border-2 flex items-center justify-center min-h-16 sm:min-h-16"
+                  className="w-[92%] sm:w-[85%] md:w-[80%] lg:w-3/4 xl:w-3/4 px-3 sm:px-5 md:px-6 lg:px-8 py-3 sm:py-3.5 md:py-4 lg:py-5 rounded-lg md:rounded-xl border-2 flex items-center justify-center min-h-[56px] sm:min-h-[60px] md:min-h-[64px] lg:min-h-16"
                   style={{
                     background: "linear-gradient(90deg, #C6E9F7 0%, #E5F8FF 100%)",
                     borderColor: "#C6E9F5",
                     fontFamily: "var(--font-manrope)",
                   }}
                 >
-                  <p className="text-base sm:text-sm md:text-lg lg:text-lg font-semibold text-gray-800 text-center">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl font-semibold text-gray-800 text-center">
                     {currentQuestion + 1}. {questions[currentQuestion].question}
                   </p>
                 </div>
 
                 {/* Answer Options */}
-                <div className="w-full flex flex-col items-center gap-3 sm:gap-3 md:gap-3">
+                <div className="w-full flex flex-col items-center gap-2 sm:gap-2.5 md:gap-3">
                   {questions[currentQuestion].options.map((option, index) => (
                     <motion.div
                       key={index}
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.99 }}
                       onClick={() => handleAnswerSelect(option)}
-                      className="px-4 sm:px-8 py-3 sm:py-4 md:py-5 rounded-lg cursor-pointer transition-all border-2 border-[#E5F8FF] flex items-center justify-center min-h-16 sm:min-h-16 w-3/4"
+                      className="px-3 sm:px-5 md:px-6 lg:px-8 py-3 sm:py-3.5 md:py-4 lg:py-5 rounded-lg md:rounded-xl cursor-pointer transition-all border-2 flex items-center justify-center min-h-[56px] sm:min-h-[60px] md:min-h-[64px] lg:min-h-16 w-[92%] sm:w-[85%] md:w-[80%] lg:w-3/4 xl:w-3/4"
                       style={{
                         background:
                           selectedAnswers[currentQuestion] === option
@@ -336,7 +335,7 @@ export default function Home() {
                         fontFamily: "var(--font-manrope)",
                       }}
                     >
-                      <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-800 text-center font-semibold">
+                      <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl text-gray-800 text-center font-semibold">
                         {option}
                       </p>
                     </motion.div>
@@ -344,14 +343,14 @@ export default function Home() {
                 </div>
                 
                 {/* Navigation Buttons */}
-                <div className="w-3/4 flex justify-end gap-3 mt-3">
+                <div className="w-[92%] sm:w-[85%] md:w-[80%] lg:w-3/4 xl:w-3/4 flex justify-end gap-2 sm:gap-3 mt-1 sm:mt-2">
                 {currentQuestion < questions.length - 1 && (
                   <motion.button
                     whileHover={{ scale: currentQuestion > 0 ? 1.05 : 1 }}
                     whileTap={{ scale: currentQuestion > 0 ? 0.95 : 1 }}
                     onClick={handlePrev}
                     disabled={currentQuestion === 0}
-                    className="w-12 h-12 flex items-center justify-center rounded-sm transition-all"
+                    className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center rounded transition-all"
                     style={{
                       background: currentQuestion > 0 ? "linear-gradient(90deg, #C6E9F7 0%, #E5F8FF 100%)" : "#F0F0F0",
                       cursor: currentQuestion > 0 ? "pointer" : "not-allowed",
@@ -371,7 +370,7 @@ export default function Home() {
                     whileTap={{ scale: selectedAnswers[currentQuestion] ? 0.95 : 1 }}
                     onClick={handleNext}
                     disabled={!selectedAnswers[currentQuestion]}
-                    className="w-12 h-12 flex items-center justify-center rounded-sm transition-all"
+                    className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center rounded transition-all"
                     style={{
                       background: selectedAnswers[currentQuestion] ? "linear-gradient(90deg, #C6E9F7 0%, #E5F8FF 100%)" : "#F0F0F0",
                       cursor: selectedAnswers[currentQuestion] ? "pointer" : "not-allowed",
@@ -379,7 +378,7 @@ export default function Home() {
                     }}
                   >
                     <IoArrowForwardSharp
-                      className="w-5 h-5 sm:w-6 sm:h-6"
+                      className="w-4 h-4 sm:w-5 sm:h-5"
                       style={{
                         color: selectedAnswers[currentQuestion] ? "#15313D" : "#A0AEC0",
                       }}
@@ -391,14 +390,13 @@ export default function Home() {
                     whileTap={{ scale: selectedAnswers[currentQuestion] ? 0.95 : 1 }}
                     onClick={handleSubmit}
                     disabled={!selectedAnswers[currentQuestion]}
-                    className="rounded-lg font-semibold transition-all text-base sm:text-lg"
+                    className="rounded-lg font-semibold transition-all text-sm sm:text-base md:text-lg lg:text-lg px-5 sm:px-6 md:px-8 py-2 sm:py-2.5"
                     style={{
                       background: selectedAnswers[currentQuestion] ? "linear-gradient(90deg, #C6E9F7 0%, #E5F8FF 100%)" : "#F0F0F0",
                       fontFamily: "var(--font-manrope)",
                       color: selectedAnswers[currentQuestion] ? "#15313D" : "#A0AEC0",
                       cursor: selectedAnswers[currentQuestion] ? "pointer" : "not-allowed",
                       opacity: selectedAnswers[currentQuestion] ? 1 : 0.5,
-                      padding: "5px 25px",
                     }}
                   >
                     Submit
