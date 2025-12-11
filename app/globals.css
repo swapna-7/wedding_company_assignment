@@ -1,1 +1,23 @@
+/**
+ * Global Stylesheet
+ * 
+ * This file imports Tailwind CSS utility classes and can be extended
+ * with custom global styles, CSS variables, and base styles.
+ * 
+ * Tailwind provides:
+ * - Utility classes for rapid UI development
+ * - Responsive design utilities
+ * - State variants (hover, focus, etc.)
+ * - Customizable design system
+ */
+
 @import "tailwindcss";
+
+/**
+ * Add any custom global styles below this line
+ * For example:
+ * - Custom CSS variables
+ * - Global resets
+ * - Base component styles
+ * - Custom animations
+ */
